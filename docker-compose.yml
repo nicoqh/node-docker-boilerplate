@@ -6,6 +6,11 @@ services:
       - type: bind
         source: ./
         target: /app
+      - type: volume
+        source: nodemodules # name of the volume, see below
+        target: /app/node_modules
+        volume:
+          nocopy: true
     working_dir: /app
     command: npm run dev
     ports:
@@ -13,3 +18,5 @@ services:
     environment:
       - NODE_ENV=development
       - PORT=3000
+volumes:
+    nodemodules:
