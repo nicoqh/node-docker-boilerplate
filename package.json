@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "build": "npm run clean && babel ./src --out-dir dist",
+    "start": "node ./dist/server.js",
+    "clean": "rm -rf ./dist && mkdir dist"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },
