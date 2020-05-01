@@ -2,7 +2,8 @@
   "scripts": {
     "build": "npm run clean && babel ./src --out-dir dist",
     "start": "node ./dist/server.js",
-    "clean": "rm -rf ./dist && mkdir dist"
+    "clean": "rm -rf ./dist && mkdir dist",
+    "dev": "nodemon --exec babel-node ./src/server.js"
   },
   "dependencies": {
     "express": "^4.17.1"
